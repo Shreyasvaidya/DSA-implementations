@@ -12,7 +12,7 @@ class Stack{
 				return false;
 			}
 		}
-    void push(int elem){
+    		void push(int elem){
 			head++;
 			array[head] = elem;
 		}
@@ -36,12 +36,5 @@ class Stack{
 		void size(){
 			cout<<head+1<<endl;
 		}
-		void isempty(){
-			if (this -> empty()){
-				cout << 1<<endl;
-			}
-			else{
-				cout <<0<<endl;
-			}
-		}
+		
 };
