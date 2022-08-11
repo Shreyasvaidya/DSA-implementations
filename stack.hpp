@@ -33,8 +33,8 @@ class Stack{
 				return array[head];
 			}
 		}
-		void size(){
-			cout<<head+1<<endl;
+		int size(){
+			return head+1;
 		}
 		
 };
