@@ -1,6 +1,6 @@
 #include <iostream>
 
-class Queue{ //my implementation , will later use to make stacks
+class Queue{ 
   private:
     int array[20000];
   public:
