@@ -1,9 +1,10 @@
+#include<iostream>
+using namespace std;
+template<class T>
 class Stack{
 	private:
-		int array[200000];//Random large number, INT_MAX giving segfault
+		T array[200000];//Random large number, INT_MAX giving segfault
 		int head = -1;
-		
-	public:
 		bool empty(){
 			if (head ==-1){
 				return true;
@@ -12,29 +13,32 @@ class Stack{
 				return false;
 			}
 		}
-    		void push(int elem){
+	public:
+		void Push(T elem){
 			head++;
 			array[head] = elem;
 		}
 		
-		void pop(){
-			if (this -> empty()){
+		void Pop(){
+			if ( empty()){
 				cout<<"stack is empty"<<endl;
 			}
 			else{
 				head --;
 			}
 		}
-		int top(){
-			if (this ->empty()){
-				return -1;
+		T peek(){
+			return array[head];
+		}
+		void size(){
+			cout<<head+1<<endl;
+		}
+		void isempty(){
+			if (this -> empty()){
+				cout << 1<<endl;
 			}
 			else{
-				return array[head];
+				cout <<0<<endl;
 			}
 		}
-		int size(){
-			return head+1;
-		}
-		
 };
