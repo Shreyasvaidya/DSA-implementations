@@ -1,8 +1,8 @@
 #include<iostream>
+using namespace std;
 class node{
     public:
-        int power;
-        int coeff;
+        int data;
         node* next;
 };
 class MyLinkedList{
@@ -28,12 +28,20 @@ class MyLinkedList{
             }
             curr -> next = NULL;
         }
-        node* pointer_to_postition(int pos){
-                node *current_node = this ->head;
+        node* pointer_to_postition(int pos){ //note the typo
+                node *current_node = head;
                 for(int i =1;i<pos;i++){
                     current_node = current_node ->next;
                 }
                 
                 return current_node;
         }
+        void print(){
+            for(int i =1;i<=lenlist;i++){
+                cout<<pointer_to_postition(i) ->data<<" ";
+            }
+            cout<<endl;
+            
+        }
+        
 };
