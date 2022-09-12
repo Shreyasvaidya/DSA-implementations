@@ -22,15 +22,9 @@ int* combined(int* arr1c,int len1,int* arr2c, int len2){
         return output;
     }
 int* merge_sort(int* array,int len){//end exclusive
-   
-    
-   
-    
-   
-    if (len==1){
+   if (len==1){
         
         return array;
-        
     }
     
     if(len%2){
@@ -40,16 +34,12 @@ int* merge_sort(int* array,int len){//end exclusive
             
             if(i<len/2+1){
                 arr1[i] = array[i];
-                
             }
             else{
                 arr2[i-len/2-1]= array[i];
             }
         }
-
-        int * toberet = combined(merge_sort(arr1,len/2+1),len/2+1,merge_sort(arr2,len/2),len/2);
-        
-        return toberet;
+        return combined(merge_sort(arr1,len/2+1),len/2+1,merge_sort(arr2,len/2),len/2);
     }
 
 
@@ -68,10 +58,8 @@ int* merge_sort(int* array,int len){//end exclusive
                 arr2[i-len/2]= array[i];
             }
         }
-        int* toberet =  combined(merge_sort(arr1,len/2),len/2,merge_sort(arr2,len/2),len/2);
-        
-        return toberet;
-        }
+        return combined(merge_sort(arr1,len/2),len/2,merge_sort(arr2,len/2),len/2);
+    }
 
 }
 int main(){
