@@ -27,11 +27,11 @@ int main(){
     int * given = new int[len];
     for(int i=0;i<len;i++){
         cin>>given[i];
-        given[i]+=500;
+        
     }
     int* ans = counting_sort(given,len,1000);
     for(int i=0;i<len;i++){
-        cout<<(ans[i]-500)<<" ";
+        cout<<ans[i]<<" ";
     }
     cout<<endl;
 
