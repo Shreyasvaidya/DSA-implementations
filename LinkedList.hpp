@@ -10,7 +10,7 @@ class MyLinkedList{
     private:
         node * head;node* curr; 
     public:
-        int lenlist;
+        int lenlist=0;
 
         MyLinkedList(int len){
 
@@ -42,6 +42,31 @@ class MyLinkedList{
             }
             cout<<endl;
             
+        }
+        void deleteFromList(int elem){//deletes the first instance of an element in the list
+            if(head->data==elem){
+                node* temp = head;
+                if(lenlist-1){
+                    head = head->next;
+                    delete head;
+                    lenlist--;
+                    return;
+                }
+                else{
+                    delete head;
+                    lenlist--;
+                    return;
+                }
+
+            }
+
+            for(int i=1;i<lenlist;i++){
+                if (pointer_to_postition(i+1)->data == elem){
+                    node* temp = pointer_to_postition(i+1);
+                    if(i<lenlist-1) pointer_to_postition(i)->next = pointer_to_postition(i+2);
+                    delete temp;
+                }
+            }
         }
         
 };
