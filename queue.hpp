@@ -1,15 +1,16 @@
 #include<iostream>
-
 using namespace std;
 template<class T>
 class Queue{ 
 	private:
 		T* array;
 	public:
+	    int head;
+	    int tail;
 		Queue(){
-			array = new T[200];
-			int head =0;
-			int tail = 0;
+			array = new T[2000000];
+			head =0;
+			tail = 0;
 		}
 		
 		bool empty(){
